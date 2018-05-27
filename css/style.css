@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'futurabold_italic';
+  src: url('futura_bold_italic_font-webfont.woff2') format('woff2'), url('futura_bold_italic_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -15,8 +22,49 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
-  color: #333333;
-  background: #fff;
+
+  color: #fff;
+  background: linear-gradient(-45deg, #FDDC62, #44C8F5, #C45AA2, #7260AA );
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 #page {
@@ -47,7 +95,7 @@ body {
 }
 
 a {
-  color: #DD356E;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -60,13 +108,44 @@ a:hover, a:active, a:focus {
 
 p {
   margin-bottom: 30px;
+   font-family: "Inconsolata", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, figure {
+h1 {
+  /*font-family: 'futura_bold_italic_font-webfont',sans-serif;*/
+  font-family: "Inconsolata", arial, sans-serif;
+  text-align: center;
+}
+
+h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Inconsolata", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
+}
+
+.title-sub {
+  display: flex; 
+  width: 350px;
+  -webkit-box-align: start; 
+  align-items: flex-start;
+  font-size: 17px;
+  font-weight: 700px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form {
+  width: 340px;
+  margin-top: 6px;
+  margin-left: 286px; 
+  position: relative;
+  margin-right: auto;
+  display: block; 
+}
+
+.w-form {
+  margin: 0 0 15px; 
 }
 
 ::-webkit-selection {
@@ -308,14 +387,15 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-cover .display-tc h2 {
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
 }
 #fh5co-header .display-tc h1,
 .fh5co-cover .display-tc h1 {
   margin-bottom: 20px;
-  font-size: 54px;
+  font-size: 35px;
   line-height: 1.3;
-  font-weight: 300;
+  font-weight: 550;
+  font-style: italic;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
@@ -618,7 +698,6 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-content-section,
 #fh5co-contact,
 #fh5co-footer {
-  padding: 7em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -661,7 +740,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #DD356E;
+  color: #fff;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1277,9 +1356,7 @@ input[type="text"] {
   border-bottom: none !important;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-nav-toggle {
-    display: block;
-  }
+ 
 }
 
 .btn {
