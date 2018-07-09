@@ -538,7 +538,7 @@ form,
   left: 0;
   right: 0;
   bottom: 0;
-  background: #050505;
+  background: #000000;
   z-index: 800;
   height: 100%;
   width: 100%;
@@ -1167,7 +1167,12 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100%;
   opacity: .6;
-  background: linear-gradient(to right, black 0%, black 50%, transparent 100%);
+  background-image: linear-gradient(to right, #A65AA0, #6C5FA6, #7CC8F2, #F5DB6B);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
 }
 
 .info-is-visible .s-home {
@@ -1176,7 +1181,21 @@ input::-moz-focus-inner {
   transform: translateX(100%);
 }
 
-
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 /* -------------------------------------------------------------------
  * ## home slides  - (_site-layout.scss) 
  * ------------------------------------------------------------------- */

@@ -111,13 +111,13 @@ html {
 }
 
 body {
-  background: #111111;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.765;
-  color: #757575;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   margin: 0;
   padding: 0;
 }
